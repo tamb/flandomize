@@ -1,0 +1,41 @@
+
+  .Wheel {
+    box-shadow: 0 0 10px gray;
+    -webkit-transition: transform 1.2s ease-out;
+    -moz-transition: transform 1.2s ease-out;
+    -o-transition: transform 1.2s ease-out;
+    transition: transform 1.2s ease-out;
+    position: relative;
+    left: calc(50% - 150px);
+    margin-top: 1rem;
+  }
+
+
+@keyframes WheelSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Arrow{
+  position: absolute;
+  top: calc(1rem + 150px - 10px);
+  left: calc(50% + 150px);
+}
+
+.Arrow{
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 10px;
+  
+}
+  
+  
+  .left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
