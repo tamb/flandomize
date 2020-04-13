@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bf07ae30e692a1ba0b016ba638e0936e",
+    "revision": "0e10e9ce5dca2eda40b10eeefa10ca5c",
     "url": "/flandomize/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/flandomize/static/css/2.669bd831.chunk.css"
   },
   {
-    "revision": "cc4a8e87b01aa37a5097",
-    "url": "/flandomize/static/css/main.a5490867.chunk.css"
+    "revision": "d800b883ea6f95507989",
+    "url": "/flandomize/static/css/main.c0719cb3.chunk.css"
   },
   {
     "revision": "3653f76227b01367a082",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/flandomize/static/js/2.050f21a9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "cc4a8e87b01aa37a5097",
+    "revision": "d800b883ea6f95507989",
     "url": "/flandomize/static/js/main.b9dd6d57.chunk.js"
   },
   {
