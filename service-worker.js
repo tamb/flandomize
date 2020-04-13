@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/flandomize/precache-manifest.cf666e70a231fd6ab7f464e84d80288b.js"
+  "/flandomize/precache-manifest.f34845d9147b094b54115d8ad5142734.js"
 );
 
 self.addEventListener('message', (event) => {
