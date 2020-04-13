@@ -14,7 +14,7 @@ import {
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import random from "random";
-import "./App.css";
+import "./App.scss";
 import RandoList from "./components/RandoList";
 
 const sayings = [

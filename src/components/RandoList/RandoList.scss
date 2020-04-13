@@ -1,3 +1,22 @@
+#todos {
+    min-height: 45vh;
+    max-height: 50vh;
+    list-style-type: circle;
+
+    li.active {
+      font-weight: bold;
+      transform: scale(1.2, 1.2) translateX(10%);
+    }
+
+    li {
+      transition: transform 0.2s ease-in;
+      width: 80%;
+      .x-icon{
+          font-size: 1.6rem;
+      }
+    }
+  }
+
 #randomize-btn{
     background-color:#4f8633;
     border-color: #7da468;

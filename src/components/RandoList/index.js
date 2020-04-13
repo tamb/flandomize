@@ -10,8 +10,9 @@ import {
   Input,
 } from "reactstrap";
 import random from "random";
+import {AutoFontSize} from 'auto-fontsize';
 import dance from "./mustache-clipart-7.png";
-import './RandoList.css'
+import './RandoList.scss'
 
 class ListItem {
   constructor(title) {
@@ -90,7 +91,18 @@ export default function RandoList(props) {
     return listData.map((item, i) => {
       return (
         <li key={i} className={`${activeItem === i ? "active" : ""}`}>
-          {item.title} | {item.count} <button className="clear-btn" onClick={()=>removeItem(i)} type="button" aria-label="remove item">&times;</button>
+          <div className="d-flex align-items-center">
+            <AutoFontSize minTextSize={16}
+              textSize={28}
+              textSizeStep={2}
+              targetLines={1}
+              targetElementType="span" 
+              text={item.title}/>
+            <span>|&nbsp;{item.count}</span>
+            <button className="clear-btn x-icon" onClick={()=>removeItem(i)} type="button" aria-label="remove item">
+              &times;
+            </button>
+          </div>
         </li>
       );
     });
@@ -126,7 +138,7 @@ export default function RandoList(props) {
       </Row>
       <Row>
         <Col xs="9">
-          <ul className="list-unstyled" id="todos">{renderList()}</ul>
+          <ul id="todos">{renderList()}</ul>
         </Col>
         <Col xs="3" id="mustache-container">
           <img alt="mustache" onClick={props.stacheClick} className={`img-fluid ${spinning? 'spin' : ''}`} src={dance} />
@@ -146,7 +158,7 @@ export default function RandoList(props) {
             </Col>
           </Row>
 
-          <Row className="footer">
+          <Row id="footer">
             <Col xs="12" className="mt-3">
               <Button
                 id="randomize-btn"
