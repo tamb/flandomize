@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/flandomize/static/css/main.c0719cb3.chunk.css",
-    "main.js": "/flandomize/static/js/main.b9dd6d57.chunk.js",
-    "main.js.map": "/flandomize/static/js/main.b9dd6d57.chunk.js.map",
+    "main.css": "/flandomize/static/css/main.b1ad8e8d.chunk.css",
+    "main.js": "/flandomize/static/js/main.16727dea.chunk.js",
+    "main.js.map": "/flandomize/static/js/main.16727dea.chunk.js.map",
     "runtime-main.js": "/flandomize/static/js/runtime-main.fd16c62e.js",
     "runtime-main.js.map": "/flandomize/static/js/runtime-main.fd16c62e.js.map",
-    "static/css/2.669bd831.chunk.css": "/flandomize/static/css/2.669bd831.chunk.css",
-    "static/js/2.050f21a9.chunk.js": "/flandomize/static/js/2.050f21a9.chunk.js",
-    "static/js/2.050f21a9.chunk.js.map": "/flandomize/static/js/2.050f21a9.chunk.js.map",
+    "static/css/2.ad27845c.chunk.css": "/flandomize/static/css/2.ad27845c.chunk.css",
+    "static/js/2.e6790397.chunk.js": "/flandomize/static/js/2.e6790397.chunk.js",
+    "static/js/2.e6790397.chunk.js.map": "/flandomize/static/js/2.e6790397.chunk.js.map",
     "index.html": "/flandomize/index.html",
-    "precache-manifest.6bf2f4e5e924fed05f05f4d1c12c1e40.js": "/flandomize/precache-manifest.6bf2f4e5e924fed05f05f4d1c12c1e40.js",
+    "precache-manifest.cf666e70a231fd6ab7f464e84d80288b.js": "/flandomize/precache-manifest.cf666e70a231fd6ab7f464e84d80288b.js",
     "service-worker.js": "/flandomize/service-worker.js",
-    "static/css/2.669bd831.chunk.css.map": "/flandomize/static/css/2.669bd831.chunk.css.map",
-    "static/css/main.c0719cb3.chunk.css.map": "/flandomize/static/css/main.c0719cb3.chunk.css.map",
-    "static/js/2.050f21a9.chunk.js.LICENSE.txt": "/flandomize/static/js/2.050f21a9.chunk.js.LICENSE.txt",
+    "static/css/2.ad27845c.chunk.css.map": "/flandomize/static/css/2.ad27845c.chunk.css.map",
+    "static/css/main.b1ad8e8d.chunk.css.map": "/flandomize/static/css/main.b1ad8e8d.chunk.css.map",
+    "static/js/2.e6790397.chunk.js.LICENSE.txt": "/flandomize/static/js/2.e6790397.chunk.js.LICENSE.txt",
     "static/media/mustache-clipart-7.png": "/flandomize/static/media/mustache-clipart-7.914d6585.png"
   },
   "entrypoints": [
     "static/js/runtime-main.fd16c62e.js",
-    "static/css/2.669bd831.chunk.css",
-    "static/js/2.050f21a9.chunk.js",
-    "static/css/main.c0719cb3.chunk.css",
-    "static/js/main.b9dd6d57.chunk.js"
+    "static/css/2.ad27845c.chunk.css",
+    "static/js/2.e6790397.chunk.js",
+    "static/css/main.b1ad8e8d.chunk.css",
+    "static/js/main.16727dea.chunk.js"
   ]
 }
