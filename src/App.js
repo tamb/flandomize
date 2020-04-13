@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Container,
   Row,
   Col,
   Navbar,
-  NavbarBrand
+  NavbarBrand,
+  NavbarToggler,
+  Collapse,
+  Nav,
+  NavItem,
+  NavLink,
 } from "reactstrap";
-import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
-  import random from 'random';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import random from "random";
 import "./App.css";
 import RandoList from "./components/RandoList";
 
@@ -28,25 +33,50 @@ const sayings = [
 ];
 
 export default function App() {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => setIsOpen(!isOpen);
 
+  function makeRandomToast() {
+    toast(sayings[random.int(0, sayings.length - 1)]);
+  }
 
-  function makeRandomToast(){
-    toast(sayings[random.int(0, (sayings.length -1))]);
+  function explainApp(){
+    toast.info("Use this app to help yourself make decisions.  Like what to eat or which alchohol-free cocktail to enjoy!  Diddly do!", {
+      position: toast.POSITION.BOTTOM_CENTER,
+      autoClose: 18000,
+    });
   }
 
   return (
     <>
-      <Navbar color="dark" dark expand="md" id="nav">
-        <NavbarBrand href="/">Flandomize <span role="img"aria-label="wave">👋</span></NavbarBrand>
+      <Navbar color="dark" dark id="nav">
+        <NavbarBrand href="/">
+          Flandomize{" "}
+          <span role="img" aria-label="wave">
+            👋
+          </span>
+        </NavbarBrand>
+        <NavbarToggler onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar>
+          <Nav className="mr-auto text-light" navbar>
+            <NavItem>
+              More is coming so just sit tight while I tinker.
+              {/* <NavLink href="/components/">Components</NavLink> */}
+            </NavItem>
+          </Nav>
+        </Collapse>
       </Navbar>
       <Container>
+        <button type="button" id="info-icon" className="clear-btn" onClick={explainApp}>
+          &#x1F6C8;
+        </button>
         <Row>
           <Col>
             <RandoList listData={[]} stacheClick={makeRandomToast} />
           </Col>
         </Row>
       </Container>
-      <ToastContainer/>
+      <ToastContainer />
     </>
   );
 }

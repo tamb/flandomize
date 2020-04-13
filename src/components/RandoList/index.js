@@ -80,11 +80,17 @@ export default function RandoList(props) {
     }, 1000);
   }
 
+  function removeItem(index){
+    const newList = listData.slice(0);
+    newList.splice(index, 1);
+    setListData(newList);
+  }
+
   function renderList() {
     return listData.map((item, i) => {
       return (
         <li key={i} className={`${activeItem === i ? "active" : ""}`}>
-          {item.title} | {item.count}
+          {item.title} | {item.count} <button className="clear-btn" onClick={()=>removeItem(i)} type="button" aria-label="remove item">&times;</button>
         </li>
       );
     });
@@ -120,10 +126,10 @@ export default function RandoList(props) {
       </Row>
       <Row>
         <Col xs="9">
-          <ul>{renderList()}</ul>
+          <ul className="list-unstyled" id="todos">{renderList()}</ul>
         </Col>
-        <Col xs="3">
-          <img alt="dancer" onClick={props.stacheClick} className={`img-fluid ${spinning? 'spin' : ''}`} src={dance} />
+        <Col xs="3" id="mustache-container">
+          <img alt="mustache" onClick={props.stacheClick} className={`img-fluid ${spinning? 'spin' : ''}`} src={dance} />
         </Col>
 
         <Col xs="12">
@@ -148,6 +154,7 @@ export default function RandoList(props) {
                 disabled={listData.length <= 1}
                 block
                 type="button"
+                className="text-light"
                 onClick={randomize}
               >
                 Ran-diddly-andomize!

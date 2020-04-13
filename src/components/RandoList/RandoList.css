@@ -8,6 +8,15 @@
     border-color: #f7ae83;
 }
 
+#mustache-container{
+    animation: 7s twitch ease-in-out infinite;
+}
+
+.clear-btn{
+    background: transparent;
+    border: 0;
+}
+
 .spin{
     animation: .75s spin ease-in;
 }
@@ -30,5 +39,27 @@
     }
     100%{
 		transform: rotateZ(360deg);
+    }
+}
+
+
+@keyframes twitch {
+	0% {
+		transform: rotateZ(0);
+	}
+	70% {
+		transform: rotateZ(0);
+    }
+    80%{
+        transform: rotateZ(-5deg);
+    }
+    85%{
+        transform: rotateZ(3deg);
+    }
+    90%{
+        transform: rotateZ(-4deg);
+    }
+    100%{
+		transform: rotateZ(0deg);
     }
 }
