@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/flandomize/static/css/main.0d10d777.chunk.css",
-    "main.js": "/flandomize/static/js/main.b29abc84.chunk.js",
-    "main.js.map": "/flandomize/static/js/main.b29abc84.chunk.js.map",
+    "main.js": "/flandomize/static/js/main.fe28b265.chunk.js",
+    "main.js.map": "/flandomize/static/js/main.fe28b265.chunk.js.map",
     "runtime-main.js": "/flandomize/static/js/runtime-main.fd16c62e.js",
     "runtime-main.js.map": "/flandomize/static/js/runtime-main.fd16c62e.js.map",
     "static/css/2.669bd831.chunk.css": "/flandomize/static/css/2.669bd831.chunk.css",
     "static/js/2.b5c1937e.chunk.js": "/flandomize/static/js/2.b5c1937e.chunk.js",
     "static/js/2.b5c1937e.chunk.js.map": "/flandomize/static/js/2.b5c1937e.chunk.js.map",
     "index.html": "/flandomize/index.html",
-    "precache-manifest.0ef4b6aa09d93d8c0806ec43fc000b46.js": "/flandomize/precache-manifest.0ef4b6aa09d93d8c0806ec43fc000b46.js",
+    "precache-manifest.49be4111460416d7045ce99ed639226d.js": "/flandomize/precache-manifest.49be4111460416d7045ce99ed639226d.js",
     "service-worker.js": "/flandomize/service-worker.js",
     "static/css/2.669bd831.chunk.css.map": "/flandomize/static/css/2.669bd831.chunk.css.map",
     "static/css/main.0d10d777.chunk.css.map": "/flandomize/static/css/main.0d10d777.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.669bd831.chunk.css",
     "static/js/2.b5c1937e.chunk.js",
     "static/css/main.0d10d777.chunk.css",
-    "static/js/main.b29abc84.chunk.js"
+    "static/js/main.fe28b265.chunk.js"
   ]
 }
