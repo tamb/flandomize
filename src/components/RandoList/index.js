@@ -139,7 +139,7 @@ export default function RandoList(props) {
   return (
     <>
       <Row>
-        <Col xs="12" md="6" className="mb-5 border-bottom">
+        <Col xs="12" md="6" className="mb-3 border-bottom">
           <h2>
             <span role="img" aria-label="point">
               👉
