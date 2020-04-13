@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2cd63db4caa8e3130957a4506daa3c73",
+    "revision": "572d8e2ddf7340925db33a3e558f6672",
     "url": "/flandomize/index.html"
   },
   {
