@@ -68,7 +68,7 @@ export default function App() {
       </Navbar>
       <Container>
         <button type="button" id="info-icon" className="clear-btn" onClick={explainApp}>
-          &#x1F6C8;
+          <span role="img" aria-label="information">ℹ️</span>
         </button>
         <Row>
           <Col>
