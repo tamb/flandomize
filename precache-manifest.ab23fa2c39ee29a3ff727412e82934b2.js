@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3eed667e677c298f805725be1521ae51",
+    "revision": "2cd63db4caa8e3130957a4506daa3c73",
     "url": "/flandomize/index.html"
   },
   {
-    "revision": "4a3ac9db551a7fe15f18",
-    "url": "/flandomize/static/css/2.9d71b1d6.chunk.css"
+    "revision": "4db92ca3b69fede9da00",
+    "url": "/flandomize/static/css/2.669bd831.chunk.css"
   },
   {
-    "revision": "12dca529429b3e626de0",
+    "revision": "4cd374bf0f0d8259d8c1",
     "url": "/flandomize/static/css/main.0d10d777.chunk.css"
   },
   {
-    "revision": "4a3ac9db551a7fe15f18",
-    "url": "/flandomize/static/js/2.428385e3.chunk.js"
+    "revision": "4db92ca3b69fede9da00",
+    "url": "/flandomize/static/js/2.b5c1937e.chunk.js"
   },
   {
     "revision": "5ac48c47bb3912b14c2d8de4f56d5ae8",
-    "url": "/flandomize/static/js/2.428385e3.chunk.js.LICENSE.txt"
+    "url": "/flandomize/static/js/2.b5c1937e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "12dca529429b3e626de0",
-    "url": "/flandomize/static/js/main.677d1605.chunk.js"
+    "revision": "4cd374bf0f0d8259d8c1",
+    "url": "/flandomize/static/js/main.b29abc84.chunk.js"
   },
   {
     "revision": "5dd29f199d5e25329bdd",
