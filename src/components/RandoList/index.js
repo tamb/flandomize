@@ -123,7 +123,7 @@ export default function RandoList(props) {
           <ul>{renderList()}</ul>
         </Col>
         <Col xs="4">
-          <img alt="dancer" className={`img-fluid ${spinning? 'spin' : ''}`} src={dance} />
+          <img alt="dancer" onClick={props.stacheClick} className={`img-fluid ${spinning? 'spin' : ''}`} src={dance} />
         </Col>
 
         <Col xs="12">
