@@ -132,8 +132,8 @@ export default function RandoList(props) {
   return (
     <>
       <Row>
-        <Col className="mb-2">
-          <h2><span role="img"aria-label="point">👉</span> {listData[activeItem] ? listData[activeItem].title : ""}</h2>
+        <Col xs="12" md="6" className="mb-5 border-bottom">
+          <h2><span role="img"aria-label="point">👉</span> <span className="text-underline">{listData[activeItem] ? listData[activeItem].title : ""}</span></h2>
         </Col>
       </Row>
       <Row>
@@ -144,7 +144,7 @@ export default function RandoList(props) {
           <img alt="mustache" onClick={props.stacheClick} className={`img-fluid ${spinning? 'spin' : ''}`} src={dance} />
         </Col>
 
-        <Col xs="12">
+        <Col xs="12" md="6">
           <Row>
             <Col>
               <Form onSubmit={addToList}>
@@ -161,18 +161,28 @@ export default function RandoList(props) {
           <Row id="footer">
             <Col xs="12" className="mt-3">
               <Button
-                id="randomize-btn"
                 size="lg"
                 disabled={listData.length <= 1}
                 block
+                color="success"
                 type="button"
-                className="text-light"
+                className="text-light randomize-btn d-md-none d-lg-none d-xl-none"
+                onClick={randomize}
+              >
+                Ran-diddly-andomize!
+              </Button>
+              <Button
+                size="lg"
+                disabled={listData.length <= 1}
+                type="button"
+                color="success"
+                className="text-light randomize-btn d-none d-sm-none d-md-block"
                 onClick={randomize}
               >
                 Ran-diddly-andomize!
               </Button>
             </Col>
-            <Col xs="12" className="mt-3">
+            <Col xs="12" md="6" className="mt-3">
               <Button
                 size="lg"
                 disabled={listData.length <= 0}

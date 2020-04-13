@@ -9,7 +9,6 @@ import {
   Collapse,
   Nav,
   NavItem,
-  NavLink,
 } from "reactstrap";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -20,7 +19,6 @@ import RandoList from "./components/RandoList";
 const sayings = [
   "I can see your doodle.",
   "What the diddly?",
-  "Hi diddly ho neighborinos!",
   "I'm not thinking straight, why did I have that wine cooler last month?",
   "I show you pity, and how do you repay me? With a kick in the kididdlehopper!",
   "Call me Delta Airlines, because I can't handle all your extra baggage.",
@@ -30,6 +28,27 @@ const sayings = [
   "There are some things we don't want to know. Important things.",
   "Now what can I ding dong diddly do for you?",
   "Can I make my famous mimosa? A little sparkling water in a glass full of regular water?",
+  "Now I know you've had a few too many waters, but that is no reason for the sailor talk.",
+  "That sounds salty, but you seem sweet. I'm going to call you kettle corn.",
+  "SPORTS stands for Strick Parental Oversight Rather Than Sports",
+  "That feeling is mutual of Omaha.",
+  "Why the crescendo, my dear, old friend-o?",
+  "Tonight's the night I do my charity work.",
+  "Ooh, what's with the lead pipe, were you going to give my noggin a flogging?",
+  "Well, get out the Crayolas and color me 'Tickled Pink'.",
+  "Well, golly, if that doesn't put the 'shaz' in 'shazam.'",
+  "Hidely-ho!",
+  "Hi-dilly-ho, neighborinos!",
+  "We're done for, we're done-diddly done for, we're done-diddly-doodily, done diddly-doodily, done diddly-doodly, done diddly-doodily!",
+  "Godspeed, little doodle.",
+  "You're doing super!",
+  "Wow as melon scratchers go, that's a honey doodle.",
+  "Feels like I'm wearing nothing at all!",
+  "Ooh that's smart!",
+  "Okily Dokily!",
+  "Okay, mister. You’ve got yourself a deal. I’ll shave off the soup strainer if you give the sailor talk the ol’ heave-ho. Okay?",
+  "Toodily-Doo!",
+  "I’m kind of in a tizzy.",
 ];
 
 export default function App() {
