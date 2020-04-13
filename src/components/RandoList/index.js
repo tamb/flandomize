@@ -10,7 +10,8 @@ import {
   Input,
 } from "reactstrap";
 import random from "random";
-import dance from "./dance.gif";
+import dance from "./mustache-clipart-7.png";
+import './RandoList.css'
 
 class ListItem {
   constructor(title) {
@@ -23,6 +24,7 @@ export default function RandoList(props) {
   const [activeItem, setActiveItem] = useState(null);
   const [prevActive, setPrevActive] = useState(0);
   const [listData, setListData] = useState(props.listData);
+  const [spinning, setSpinning] = useState(false);
 
   useEffect(()=>{
     localforage.setItem("RandoList", listData);
@@ -36,6 +38,7 @@ export default function RandoList(props) {
   },[]);
 
   function cycleToInt(prev, list) {
+      setSpinning(true);
     const cycles = random.int(3, 7);
     const goal = random.int(0, list.length - 1);
     let index = prev;
@@ -72,6 +75,9 @@ export default function RandoList(props) {
       setListData(newList);
     }, 300);
     setPrevActive(index);
+    setTimeout(()=>{
+        setSpinning(false);
+    }, 1000);
   }
 
   function renderList() {
@@ -95,7 +101,7 @@ export default function RandoList(props) {
     if (input.value.length > 0){
         newList.push(new ListItem(input.value));
     } else {
-        alert('enter a value, bitch!');
+        alert('Please enter a value... doodly!');
     }
     setListData(newList);
     input.value = "";
@@ -108,8 +114,8 @@ export default function RandoList(props) {
   return (
     <>
       <Row>
-        <Col className="md-2">
-          <h2><span role="img"aria-label="thumbs up">👍</span> {listData[activeItem] ? listData[activeItem].title : ""}</h2>
+        <Col className="mb-2">
+          <h2><span role="img"aria-label="point">👉</span> {listData[activeItem] ? listData[activeItem].title : ""}</h2>
         </Col>
       </Row>
       <Row>
@@ -117,7 +123,7 @@ export default function RandoList(props) {
           <ul>{renderList()}</ul>
         </Col>
         <Col xs="4">
-          <img alt="dancer" className="img-fluid" src={dance} />
+          <img alt="dancer" className={`img-fluid ${spinning? 'spin' : ''}`} src={dance} />
         </Col>
 
         <Col xs="12">
@@ -127,7 +133,7 @@ export default function RandoList(props) {
                 <InputGroup>
                   <Input />
                   <InputGroupAddon addonType="append">
-                    <Button type="submit">Add item</Button>
+                    <Button id="add-item-btn" type="submit">Add an item, strangerino</Button>
                   </InputGroupAddon>
                 </InputGroup>
               </Form>
@@ -137,10 +143,10 @@ export default function RandoList(props) {
           <Row className="footer">
             <Col xs="12" className="mt-3">
               <Button
+                id="randomize-btn"
                 size="lg"
                 disabled={listData.length <= 1}
                 block
-                color="success"
                 type="button"
                 onClick={randomize}
               >
@@ -155,7 +161,7 @@ export default function RandoList(props) {
                 type="button"
                 onClick={clearList}
               >
-                clear list
+                clear-a-roonie
               </Button>
             </Col>
           </Row>

@@ -13,8 +13,8 @@ export default function App() {
 
   return (
     <>
-      <Navbar color="dark" dark expand="md">
-        <NavbarBrand href="/">Ran-diddly</NavbarBrand>
+      <Navbar color="dark" dark expand="md" id="nav">
+        <NavbarBrand href="/">Flandomize <span role="img"aria-label="wave">👋</span></NavbarBrand>
       </Navbar>
       <Container>
         <Row>

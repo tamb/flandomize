@@ -1,0 +1,34 @@
+#randomize-btn{
+    background-color:#4f8633;
+    border-color: #7da468;
+}
+
+#add-item-btn{
+    background-color: #fac5cb;
+    border-color: #f7ae83;
+}
+
+.spin{
+    animation: .75s spin ease-in;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotateZ(0);
+	}
+	70% {
+		transform: rotateZ(390deg);
+    }
+    80%{
+        transform: rotateZ(350deg);
+    }
+    85%{
+        transform: rotateZ(370deg);
+    }
+    90%{
+        transform: rotateZ(355deg);
+    }
+    100%{
+		transform: rotateZ(360deg);
+    }
+}
