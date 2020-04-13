@@ -86,12 +86,9 @@ export default function App() {
         </Collapse>
       </Navbar>
       <Container>
-        <button type="button" id="info-icon" className="clear-btn" onClick={explainApp}>
-          <span role="img" aria-label="information">ℹ️</span>
-        </button>
         <Row>
           <Col>
-            <RandoList listData={[]} stacheClick={makeRandomToast} />
+            <RandoList listData={[]} stacheClick={makeRandomToast} infoClick={explainApp} />
           </Col>
         </Row>
       </Container>
