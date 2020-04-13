@@ -61,7 +61,7 @@ export default function App() {
 
   function explainApp(){
     toast.info("Use this app to help yourself make decisions.  Like what to eat or which alchohol-free cocktail to enjoy!  Diddly do!", {
-      position: toast.POSITION.BOTTOM_CENTER,
+      position: toast.POSITION.TOP_CENTER,
       autoClose: 18000,
     });
   }

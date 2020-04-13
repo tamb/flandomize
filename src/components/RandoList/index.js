@@ -94,7 +94,7 @@ export default function RandoList(props) {
           <div className="d-flex align-items-center">
             <AutoFontSize
               minTextSize={16}
-              textSize={28}
+              textSize={20}
               textSizeStep={2}
               targetLines={1}
               targetElementType="span"
@@ -139,8 +139,8 @@ export default function RandoList(props) {
   return (
     <>
       <Row>
-        <Col xs="12" md="6" className="mb-3 border-bottom">
-          <h2>
+        <Col xs="12" md="6" className="mb-3">
+          <h2 className="border-bottom">
             <span role="img" aria-label="point">
               👉
             </span>{" "}
