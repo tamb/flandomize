@@ -179,7 +179,7 @@ export default function RandoList(props) {
             </Col>
           </Row>
 
-          <Row id="footer">
+          <Row>
             <Col xs="12" className="mt-3">
               <Button
                 size="lg"

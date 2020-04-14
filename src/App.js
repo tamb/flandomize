@@ -1,18 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Container,
   Row,
   Col,
+  Button,
   Navbar,
   NavbarBrand,
   NavbarToggler,
   Collapse,
   Nav,
   NavItem,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
 } from "reactstrap";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import random from "random";
+import localforage from "localforage";
 import "./App.scss";
 import RandoList from "./components/RandoList";
 
@@ -54,16 +60,67 @@ const sayings = [
 export default function App() {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
+  const [modalOpen, setModal] = useState(false);
+
+  useEffect(()=>{
+    localforage.getItem("hideModal").then(data => {
+      console.log('d', data)
+      if (!data){
+        setModal(true);
+      }
+    });
+  },[]);
+
+  function toggleModal(){
+    setModal(!modalOpen);
+  }
+
+  function hideAroo(){
+    setModal(false);
+    localforage.setItem("hideModal", true);
+  }
+
+  function renderHowTo(){
+    const modal = (
+      <Modal isOpen={modalOpen} toggle={toggleModal}>
+          <ModalHeader toggle={toggleModal}>Hi-dilly-ho, neighborinos!</ModalHeader>
+          <ModalBody>
+            <p className="font-weight-bold">
+            Here's how you use my granny smithish app tapple-roonie!
+            </p>
+            <ol>
+              <li className="mt-1">Create some list items for this list using the pink button</li>
+              <li className="mt-1">Press the green button to randomize a selection within the list</li>
+              <li className="mt-1">Use it to help you make decisions like which Bible passage to read or which sugar-free soda pop to sip</li>
+              <li className="mt-1">Then just poke your nose around and explore</li>
+            </ol>
+          </ModalBody>
+          <ModalFooter>
+            <Button color="primary" onClick={hideAroo}>
+              Don't show again
+            </Button>{" "}
+            <Button color="secondary" onClick={toggleModal}>
+              Dismiss
+            </Button>
+          </ModalFooter>
+        </Modal>
+    );
+
+    return modal;
+  }
 
   function makeRandomToast() {
     toast(sayings[random.int(0, sayings.length - 1)]);
   }
 
-  function explainApp(){
-    toast.info("Use this app to help yourself make decisions.  Like what to eat or which alchohol-free cocktail to enjoy!  Diddly do!", {
-      position: toast.POSITION.TOP_CENTER,
-      autoClose: 18000,
-    });
+  function explainApp() {
+    toast.info(
+      "Use this app to help yourself make decisions.  Like what to eat or which alchohol-free cocktail to enjoy!  Diddly do!",
+      {
+        position: toast.POSITION.TOP_CENTER,
+        autoClose: 18000,
+      }
+    );
   }
 
   return (
@@ -88,9 +145,14 @@ export default function App() {
       <Container>
         <Row>
           <Col>
-            <RandoList listData={[]} stacheClick={makeRandomToast} infoClick={explainApp} />
+            <RandoList
+              listData={[]}
+              stacheClick={makeRandomToast}
+              infoClick={explainApp}
+            />
           </Col>
         </Row>
+        {renderHowTo()}
       </Container>
       <ToastContainer />
     </>
