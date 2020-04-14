@@ -1,3 +1,5 @@
+@import './colors';
+
 body {
   background: rgb(254, 214, 31);
   background: -moz-linear-gradient(
@@ -20,5 +22,10 @@ body {
 
   .container{
     overflow: hidden;
+  }
+
+  button[disabled]{
+    opacity: 0.3 !important;
+    cursor: not-allowed;
   }
 }

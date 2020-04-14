@@ -61,12 +61,15 @@ export default function App() {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
   const [modalOpen, setModal] = useState(false);
+  const [dontShowAgain, setDSA] = useState(false);
 
   useEffect(()=>{
     localforage.getItem("hideModal").then(data => {
       console.log('d', data)
       if (!data){
         setModal(true);
+      } else {
+        setDSA(true);
       }
     });
   },[]);
@@ -77,29 +80,34 @@ export default function App() {
 
   function hideAroo(){
     setModal(false);
+    setDSA(true);
     localforage.setItem("hideModal", true);
+  }
+
+  function showModal(){
+    setModal(true);
   }
 
   function renderHowTo(){
     const modal = (
-      <Modal isOpen={modalOpen} toggle={toggleModal}>
+      <Modal isOpen={modalOpen} toggle={toggleModal}>S
           <ModalHeader toggle={toggleModal}>Hi-dilly-ho, neighborinos!</ModalHeader>
           <ModalBody>
             <p className="font-weight-bold">
             Here's how you use my granny smithish app tapple-roonie!
             </p>
             <ol>
-              <li className="mt-1">Create some list items for this list using the pink button</li>
-              <li className="mt-1">Press the green button to randomize a selection within the list</li>
-              <li className="mt-1">Use it to help you make decisions like which Bible passage to read or which sugar-free soda pop to sip</li>
+              <li className="mt-1">Create some list items for this list using the <span className="pink-border">pink button</span></li>
+              <li className="mt-1">Press the <span className="green-border">green button</span> to randomize a selection within the list</li>
+              <li className="mt-1">Use it to help you make decisions like which Bible passage to read or which soda pop to sip</li>
               <li className="mt-1">Then just poke your nose around and explore</li>
             </ol>
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={hideAroo}>
+            <Button color="primary" disabled={dontShowAgain? true : false} onClick={hideAroo}>
               Don't show again
             </Button>{" "}
-            <Button color="secondary" onClick={toggleModal}>
+            <Button color="danger" onClick={toggleModal}>
               Dismiss
             </Button>
           </ModalFooter>
@@ -113,15 +121,7 @@ export default function App() {
     toast(sayings[random.int(0, sayings.length - 1)]);
   }
 
-  function explainApp() {
-    toast.info(
-      "Use this app to help yourself make decisions.  Like what to eat or which alchohol-free cocktail to enjoy!  Diddly do!",
-      {
-        position: toast.POSITION.TOP_CENTER,
-        autoClose: 18000,
-      }
-    );
-  }
+
 
   return (
     <>
@@ -148,7 +148,7 @@ export default function App() {
             <RandoList
               listData={[]}
               stacheClick={makeRandomToast}
-              infoClick={explainApp}
+              infoClick={showModal}
             />
           </Col>
         </Row>

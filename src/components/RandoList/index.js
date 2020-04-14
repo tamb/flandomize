@@ -33,7 +33,9 @@ export default function RandoList(props) {
 
   useEffect(() => {
     localforage.getItem("RandoList").then((data) => {
-      data = data || [];
+      if(!data || data.length <= 0){
+        data = [{title: "Dr. Pep-diddly-epper", count: 0}, {title: "Tab-aroonie", count: 0 }];
+      }
       setListData(data);
     });
   }, []);
@@ -183,7 +185,7 @@ export default function RandoList(props) {
             <Col xs="12" className="mt-3">
               <Button
                 size="lg"
-                disabled={listData.length <= 1}
+                disabled={listData.length <= 1? true : false}
                 block
                 color="success"
                 type="button"
@@ -194,7 +196,7 @@ export default function RandoList(props) {
               </Button>
               <Button
                 size="lg"
-                disabled={listData.length <= 1}
+                disabled={listData.length <= 1? true : false}
                 type="button"
                 color="success"
                 className="text-light randomize-btn d-none d-sm-none d-md-block"
@@ -206,7 +208,7 @@ export default function RandoList(props) {
             <Col xs="8" md="6" className="mt-3">
               <Button
                 size="lg"
-                disabled={listData.length <= 0}
+                disabled={listData.length <= 0? true : false}
                 color="danger"
                 type="button"
                 onClick={clearList}

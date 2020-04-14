@@ -1,0 +1,26 @@
+$yellow: #fed61f;
+$yellow--muted: #ffeca7;
+
+$green: #4f8633;
+$green--muted: #7da468;
+
+$pink: #fac5cb;
+$pink--muted: #f7ae83;
+
+$red: #FF4136;
+$red--muted: #ff291d;
+
+.red-border{
+    border: 3px solid $red;
+    padding: 0 3px;
+}
+
+.green-border{
+    border: 3px solid $green;
+    padding: 0 3px;
+}
+
+.pink-border{
+    border: 3px solid $pink;
+    padding: 0 3px;
+}

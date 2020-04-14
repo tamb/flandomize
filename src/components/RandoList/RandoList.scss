@@ -1,3 +1,5 @@
+@import './../../colors';
+
 #todos {
     min-height: 45vh;
     max-height: 50vh;
@@ -22,13 +24,13 @@
   }
 
 .randomize-btn{
-    background-color:#4f8633;
-    border-color: #7da468;
+    background-color: $green;
+    border-color: $green--muted;
 }
 
 #add-item-btn{
-    background-color: #fac5cb;
-    border-color: #f7ae83;
+    background-color: $pink;
+    border-color: $pink--muted;
 }
 
 #mustache-container{
