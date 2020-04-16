@@ -15,6 +15,7 @@ import {
   ModalBody,
   ModalFooter,
 } from "reactstrap";
+import {BsX} from 'react-icons/bs';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import random from "random";
@@ -88,10 +89,12 @@ export default function App() {
     setModal(true);
   }
 
+  const closeBtn = <button className="close" onClick={toggleModal}><BsX/></button>;
+
   function renderHowTo(){
     const modal = (
-      <Modal isOpen={modalOpen} toggle={toggleModal}>S
-          <ModalHeader toggle={toggleModal}>Hi-dilly-ho, neighborinos!</ModalHeader>
+      <Modal isOpen={modalOpen} toggle={toggleModal}>
+          <ModalHeader toggle={toggleModal} close={closeBtn}>Hi-dilly-ho, neighborinos!</ModalHeader>
           <ModalBody>
             <p className="font-weight-bold">
             Here's how you use my granny smithish app tapple-roonie!
@@ -118,7 +121,9 @@ export default function App() {
   }
 
   function makeRandomToast() {
-    toast(sayings[random.int(0, sayings.length - 1)]);
+    toast(sayings[random.int(0, sayings.length - 1)], {
+      closeButton: <BsX/>
+    });
   }
 
 

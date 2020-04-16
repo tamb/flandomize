@@ -9,6 +9,7 @@ import {
   InputGroupAddon,
   Input,
 } from "reactstrap";
+import { BsInfoSquareFill, BsX } from 'react-icons/bs';
 import random from "random";
 import { AutoFontSize } from "auto-fontsize";
 import dance from "./mustache-clipart-7.png";
@@ -109,7 +110,7 @@ export default function RandoList(props) {
               type="button"
               aria-label="remove item"
             >
-              &times;
+              <BsX/>
             </button>
           </div>
         </li>
@@ -223,9 +224,7 @@ export default function RandoList(props) {
                 className="clear-btn"
                 onClick={props.infoClick}
               >
-                <span role="img" aria-label="information">
-                  ℹ️
-                </span>
+                <BsInfoSquareFill/>
               </button>
             </Col>
           </Row>
