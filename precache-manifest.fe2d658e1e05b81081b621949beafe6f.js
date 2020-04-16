@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "219b40652ea4141761fd5bba9848dfbc",
+    "revision": "dccff58088e7234d998680e9fe1dd7a5",
     "url": "/flandomize/index.html"
   },
   {
-    "revision": "e16ed956ea0b08a2419e",
+    "revision": "501c1e58e8151d5929d1",
     "url": "/flandomize/static/css/2.ad27845c.chunk.css"
   },
   {
-    "revision": "c38f2021a9cd1299c92a",
+    "revision": "a47202e27323afc6820f",
     "url": "/flandomize/static/css/main.19b1978d.chunk.css"
   },
   {
-    "revision": "e16ed956ea0b08a2419e",
-    "url": "/flandomize/static/js/2.46cd2206.chunk.js"
+    "revision": "501c1e58e8151d5929d1",
+    "url": "/flandomize/static/js/2.fff8a7e2.chunk.js"
   },
   {
     "revision": "5ac48c47bb3912b14c2d8de4f56d5ae8",
-    "url": "/flandomize/static/js/2.46cd2206.chunk.js.LICENSE.txt"
+    "url": "/flandomize/static/js/2.fff8a7e2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c38f2021a9cd1299c92a",
-    "url": "/flandomize/static/js/main.5ff411c9.chunk.js"
+    "revision": "a47202e27323afc6820f",
+    "url": "/flandomize/static/js/main.231c623f.chunk.js"
   },
   {
     "revision": "5dd29f199d5e25329bdd",
