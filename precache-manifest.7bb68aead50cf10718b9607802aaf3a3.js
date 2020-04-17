@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dccff58088e7234d998680e9fe1dd7a5",
+    "revision": "d18beda38a20e7ab1876e99ca5a03eb7",
     "url": "/flandomize/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/flandomize/static/css/2.ad27845c.chunk.css"
   },
   {
-    "revision": "a47202e27323afc6820f",
+    "revision": "332dd88a49e18a420e30",
     "url": "/flandomize/static/css/main.19b1978d.chunk.css"
   },
   {
@@ -20,15 +20,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/flandomize/static/js/2.fff8a7e2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a47202e27323afc6820f",
-    "url": "/flandomize/static/js/main.231c623f.chunk.js"
+    "revision": "332dd88a49e18a420e30",
+    "url": "/flandomize/static/js/main.e9094c44.chunk.js"
   },
   {
     "revision": "5dd29f199d5e25329bdd",
     "url": "/flandomize/static/js/runtime-main.fd16c62e.js"
-  },
-  {
-    "revision": "914d6585458f655004cd15d1266e56cb",
-    "url": "/flandomize/static/media/mustache-clipart-7.914d6585.png"
   }
 ]);

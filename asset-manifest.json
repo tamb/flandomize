@@ -1,26 +1,25 @@
 {
   "files": {
     "main.css": "/flandomize/static/css/main.19b1978d.chunk.css",
-    "main.js": "/flandomize/static/js/main.231c623f.chunk.js",
-    "main.js.map": "/flandomize/static/js/main.231c623f.chunk.js.map",
+    "main.js": "/flandomize/static/js/main.e9094c44.chunk.js",
+    "main.js.map": "/flandomize/static/js/main.e9094c44.chunk.js.map",
     "runtime-main.js": "/flandomize/static/js/runtime-main.fd16c62e.js",
     "runtime-main.js.map": "/flandomize/static/js/runtime-main.fd16c62e.js.map",
     "static/css/2.ad27845c.chunk.css": "/flandomize/static/css/2.ad27845c.chunk.css",
     "static/js/2.fff8a7e2.chunk.js": "/flandomize/static/js/2.fff8a7e2.chunk.js",
     "static/js/2.fff8a7e2.chunk.js.map": "/flandomize/static/js/2.fff8a7e2.chunk.js.map",
     "index.html": "/flandomize/index.html",
-    "precache-manifest.fe2d658e1e05b81081b621949beafe6f.js": "/flandomize/precache-manifest.fe2d658e1e05b81081b621949beafe6f.js",
+    "precache-manifest.7bb68aead50cf10718b9607802aaf3a3.js": "/flandomize/precache-manifest.7bb68aead50cf10718b9607802aaf3a3.js",
     "service-worker.js": "/flandomize/service-worker.js",
     "static/css/2.ad27845c.chunk.css.map": "/flandomize/static/css/2.ad27845c.chunk.css.map",
     "static/css/main.19b1978d.chunk.css.map": "/flandomize/static/css/main.19b1978d.chunk.css.map",
-    "static/js/2.fff8a7e2.chunk.js.LICENSE.txt": "/flandomize/static/js/2.fff8a7e2.chunk.js.LICENSE.txt",
-    "static/media/mustache-clipart-7.png": "/flandomize/static/media/mustache-clipart-7.914d6585.png"
+    "static/js/2.fff8a7e2.chunk.js.LICENSE.txt": "/flandomize/static/js/2.fff8a7e2.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.fd16c62e.js",
     "static/css/2.ad27845c.chunk.css",
     "static/js/2.fff8a7e2.chunk.js",
     "static/css/main.19b1978d.chunk.css",
-    "static/js/main.231c623f.chunk.js"
+    "static/js/main.e9094c44.chunk.js"
   ]
 }
