@@ -103,12 +103,12 @@ export default function RandoList(props) {
               targetElementType="span"
               text={item.title}
             />
-            <span>|&nbsp;{item.count}</span>
+            <span aria-label="Chose the following number of times:">|&nbsp;{item.count}</span>
             <button
               className="clear-btn x-icon"
               onClick={() => removeItem(i)}
               type="button"
-              aria-label="remove item"
+              aria-label="Remove this list item."
             >
               <BsX/>
             </button>
@@ -155,7 +155,7 @@ export default function RandoList(props) {
       </Row>
       <Row>
         <Col xs="9">
-          <ul id="todos">{renderList()}</ul>
+          <ul id="todos" aria-live="polite">{renderList()}</ul>
         </Col>
         <Col xs="3" id="mustache-container">
           <img
@@ -171,9 +171,10 @@ export default function RandoList(props) {
             <Col>
               <Form onSubmit={addToList}>
                 <InputGroup>
-                  <Input />
+                  <label className="sr-only" htmlFor="addItem">Add a list item.</label>
+                  <Input id="addItem"/>
                   <InputGroupAddon addonType="append">
-                    <Button id="add-item-btn" type="submit">
+                    <Button id="add-item-btn" type="submit" aria-label="Add item to list.">
                       Add an item, strangerino
                     </Button>
                   </InputGroupAddon>
@@ -190,6 +191,8 @@ export default function RandoList(props) {
                 block
                 color="success"
                 type="button"
+                aria-label="Randomize the list."
+                aria-controls="todos"
                 className="text-light randomize-btn d-md-none d-lg-none d-xl-none"
                 onClick={randomize}
               >
@@ -200,6 +203,8 @@ export default function RandoList(props) {
                 disabled={listData.length <= 1? true : false}
                 type="button"
                 color="success"
+                aria-label="Randomize the list."
+                aria-controls="todos"
                 className="text-light randomize-btn d-none d-sm-none d-md-block"
                 onClick={randomize}
               >
@@ -212,6 +217,8 @@ export default function RandoList(props) {
                 disabled={listData.length <= 0? true : false}
                 color="danger"
                 type="button"
+                aria-label="Clear the list."
+                aria-controls="todos"
                 onClick={clearList}
               >
                 clear-a-roonie
@@ -222,6 +229,7 @@ export default function RandoList(props) {
                 type="button"
                 id="info-icon"
                 className="clear-btn"
+                aria-label="Show information about this application."
                 onClick={props.infoClick}
               >
                 <BsInfoSquareFill/>
