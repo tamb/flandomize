@@ -267,7 +267,6 @@ export default function RandoList(props) {
             </Col>
             <Col xs="8" md="6" className="mt-3">
               <Button
-                size="lg"
                 disabled={listData.length <= 0 ? true : false}
                 color="danger"
                 type="button"
