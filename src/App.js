@@ -89,7 +89,8 @@ export default function App() {
               or which soda pop to sip
             </li>
             <li>
-              You can clear the list with the <span className="red-border">red button</span>.
+              You can clear the list with the{" "}
+              <span className="red-border">red button</span>.
             </li>
             <li className="mt-1">
               Then just poke your nose around and explore
@@ -140,7 +141,7 @@ export default function App() {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto text-light" navbar>
             <NavItem>
-              More is coming so just sit tight while I tinker.
+              Saved lists are coming soon! Sit tight!
               {/* <NavLink href="/components/">Components</NavLink> */}
             </NavItem>
           </Nav>
