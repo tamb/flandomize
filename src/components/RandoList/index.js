@@ -24,7 +24,6 @@ class ListItem {
 
 export default function RandoList(props) {
   const [activeItem, setActiveItem] = useState(null);
-  const [prevActive, setPrevActive] = useState(0);
   const [listData, setListData] = useState(props.listData);
   const [spinning, setSpinning] = useState(false);
   const [randomTimes, setRandomTimes] = useState(1);
@@ -45,48 +44,22 @@ export default function RandoList(props) {
     });
   }, []);
 
-  function cycleToInt(prev, list) {
+  function randomize(list) {
     //todo fix random work
     setSpinning(true);
-    const cycles = random.int(randomTimes, randomTimes);
-    const goal = random.int(0, list.length - 1);
-    let index = prev;
-    let passes = 0;
+    const cycles = randomTimes;
+    const selectedItems = [];
+    const items = {};
 
-    console.log(
-      "PASSES",
-      passes,
-      "INDEX",
-      index,
-      "GOAL",
-      goal,
-      "CYCLES",
-      cycles
-    );
-
-    while (passes <= cycles || index !== goal) {
-      ++index;
-      if (index >= list.length) {
-        index = 0;
+    for (let i = 0; i < cycles; i++) {
+      const int = random.int(0, list.length - 1);
+      if (items[int]) {
+        items[int] = ++items[int];
+      } else {
+        items[int] = 1;
       }
-      console.log(index);
-      if (index === prev) {
-        console.log("PASSED", prev);
-        passes = passes + 1;
-      }
-
-      setActiveItem(null);
+      selectedItems.push(int);
     }
-    setTimeout(() => {
-      setActiveItem(index);
-      const newList = listData.slice(0);
-      newList[index].count = newList[index].count + 1;
-      setListData(newList);
-    }, 300);
-    setPrevActive(index);
-    setTimeout(() => {
-      setSpinning(false);
-    }, 1000);
   }
 
   function removeItem(index) {
@@ -123,10 +96,6 @@ export default function RandoList(props) {
         </li>
       );
     });
-  }
-
-  function randomize() {
-    cycleToInt(prevActive, listData);
   }
 
   function addToList(e) {
@@ -238,7 +207,7 @@ export default function RandoList(props) {
                     aria-label="Randomize the list."
                     aria-controls="todos"
                     className="text-light randomize-btn d-md-none d-lg-none d-xl-none"
-                    onClick={randomize}
+                    onClick={() => randomize(listData)}
                   >
                     Ran-diddly-andomize!
                   </Button>
@@ -249,7 +218,7 @@ export default function RandoList(props) {
                     aria-label="Randomize the list."
                     aria-controls="todos"
                     className="text-light randomize-btn d-none d-sm-none d-md-block"
-                    onClick={randomize}
+                    onClick={() => randomize(listData)}
                   >
                     Ran-diddly-andomize!
                   </Button>
