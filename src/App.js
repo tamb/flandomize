@@ -21,7 +21,7 @@ import "react-toastify/dist/ReactToastify.css";
 import random from "random";
 import localforage from "localforage";
 import "./App.scss";
-import RandoList from "./components/RandoList";
+import RandoList from "./components/RandoList/RandoList";
 import sayings from "./sayings";
 
 export default function App() {
