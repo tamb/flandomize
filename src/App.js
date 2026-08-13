@@ -131,7 +131,7 @@ export default function App() {
   return (
     <>
       <Navbar color="dark" dark id="nav">
-        <NavbarBrand href="/">
+        <NavbarBrand href={process.env.PUBLIC_URL || "/"}>
           Flandomize{" "}
           <span role="img" aria-label="wave">
             👋
